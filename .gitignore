@@ -1,0 +1,7 @@
+# .Net related
+bin/
+obj/
+packages/
+
+# Public
+.env
