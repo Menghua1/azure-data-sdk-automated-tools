@@ -2,6 +2,7 @@
 bin/
 obj/
 packages/
+.azure/
 
 # Public
 .env

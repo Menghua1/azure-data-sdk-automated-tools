@@ -1,0 +1,1 @@
+echo "prerestore hook has been triggered." | Out-File -Append ./result.txt

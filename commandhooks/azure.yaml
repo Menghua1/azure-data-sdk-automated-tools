@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: todo-python-mongo
+metadata:
+  template: todo-python-mongo@0.0.1-beta
+hooks:
+  prepackage:
+    windows:
+      run: ./hooks/prepackage.ps1
+      interactive: true
+    posix:
+      run: ./hooks/prepackage.sh
+      interactive: true
+  postpackage:
+    run: ./hooks/postpackage.ps1
+    interactive: true
+  preprovision:
+    run: ./hooks/preprovision.ps1
+    interactive: true
+  postprovision:
+    run: ./hooks/postprovision.ps1
+    interactive: true
+  predeploy:
+    run: ./hooks/predeploy.ps1
+    interactive: true
+  postdeploy:
+    run: ./hooks/postdeploy.ps1
+    interactive: true
+  prerestore:
+    run: ./hooks/prerestore.ps1
+    interactive: true
+  postrestore:
+    run: ./hooks/postrestore.ps1
+    interactive: true
+  preup:
+    run: ./hooks/preup.ps1
+    interactive: true
+  postup:
+    run: ./hooks/postup.ps1
+    interactive: true
+  predown:
+    run: ./hooks/predown.ps1
+    interactive: true
+  postdown:
+    run: ./hooks/postdown.ps1
+    interactive: true
