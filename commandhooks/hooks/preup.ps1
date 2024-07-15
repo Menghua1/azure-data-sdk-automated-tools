@@ -1,1 +1,1 @@
-echo "preup hook has been triggered." | Out-File -Append ./result.txt
+echo "preup hook has been triggered. env_name: ${AZURE_ENV_NAME}" | Out-File -Append ./result.txt

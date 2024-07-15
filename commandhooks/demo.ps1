@@ -5,7 +5,7 @@ $subscription='faa080af-c1d8-40ad-9cce-e1a450ca5b57'
 echo "`n--------------------Initializing template--------------------"
 azd init -e $env_name -l $location -s $subscription
 
-echo "******** TEST LOCAL FILE HOOK PART ********" | Out-File -Append ./result.txt
+echo "******** TEST LOCAL FILE HOOK / TEST AZD VARS / INTERACTIVE SET / RUN ON WINDOWS ********" | Out-File -Append ./result.txt
 
 echo "`n--------------------Testing Package related hooks--------------------"
 azd package
