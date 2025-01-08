@@ -1,4 +1,0 @@
-https://github.com/Azure-Samples/201---arc-enabled-keyvault-sample
-https://github.com/Azure-Samples/aca-dev-service-kafka-azd
-https://github.com/Azure-Samples/aca-dev-service-postgres-azd
-https://github.com/Azure-Samples/agent-openai-python-prompty

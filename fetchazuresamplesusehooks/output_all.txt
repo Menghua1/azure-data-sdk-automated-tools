@@ -1,0 +1,11 @@
+https://github.com/Azure-Samples/ai-chat-aspire-meai-csharp
+https://github.com/Azure-Samples/ai-chat-aspire-sk-csharp
+https://github.com/Azure-Samples/ai-chat-quickstart-csharp
+https://github.com/Azure-Samples/aisearch-openai-rag-audio
+https://github.com/Azure-Samples/aks-store-demo
+https://github.com/Azure-Samples/APICenter-Reference
+https://github.com/Azure-Samples/apptemplate-wordpress-on-aca
+https://github.com/Azure-Samples/aspire-app-dev-in-a-day-ko
+https://github.com/Azure-Samples/azd-ai-starter
+https://github.com/Azure-Samples/azd-aistudio-starter
+https://github.com/Azure-Samples/azd-apic-sap

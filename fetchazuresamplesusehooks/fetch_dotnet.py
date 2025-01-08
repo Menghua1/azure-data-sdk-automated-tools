@@ -15,11 +15,11 @@ headers = {
     'cookie': cookie                         # 如果需要，您可以保留 cookie
 }
 
-for i in range(88,101):
+for i in range(1,50):
     page = f'page={i}'
     print(f"00000000000000000000000000000000000000page={page}")
-    response = urllib.request.urlopen(Request('https://github.com/orgs/Azure-Samples/repositories?q=sort:name-asc&%s' % (page)))
-    print(f'https://github.com/orgs/Azure-Samples/repositories?q=sort:name-asc&{page}')
+    response = urllib.request.urlopen(Request('https://github.com/orgs/dotnet/repositories?q=sort:name-asc&%s' % (page)))
+    print(f'https://github.com/orgs/dotnet/repositories?q=sort:name-asc&{page}')
     if response:
         # Get page content
         html_content = response.read().decode('utf-8')
@@ -33,7 +33,7 @@ for i in range(88,101):
             if(repo_name != '•'):
                 encoded_repo_name = urllib.parse.quote(span.text.strip())
                 print(f"222222222222222222222: {encoded_repo_name}")
-                href = f'https://github.com/search?q=repo%3AAzure-Samples%2F{encoded_repo_name}%20setup-azd%40v1.0.0&type=code'
+                href = f'https://github.com/search?q=repo%3Adotnet%2F{encoded_repo_name}%20setup-azd%40v1.0.0&type=code'
                 r = urllib.request.urlopen(Request(url=href, headers=headers))
                 repo_html_content = r.read().decode('utf-8')
                 repo_soup = BeautifulSoup(repo_html_content, 'html.parser')
@@ -41,9 +41,9 @@ for i in range(88,101):
                 find_infra_core = repo_soup.find('span', attrs={'class':'Text__StyledText-sc-17v1xeu-0 hWqAbU'})
                 print(f"333333333333333333333: {find_infra_core}")
                 if find_infra_core and find_infra_core.text != '0':
-                    repo = f'https://github.com/Azure-Samples/{span.text}'
+                    repo = f'https://github.com/dotnet/{span.text}'
                     count += 1
-                    with open('output_all_1.txt', 'a', encoding='utf-8') as file:
+                    with open('output_all_dotnet.txt', 'a', encoding='utf-8') as file:
                         file.write(repo + '\n')
                     print(repo)
                     print(f"11111111111111111111111111Processing repository: {repo_name}")

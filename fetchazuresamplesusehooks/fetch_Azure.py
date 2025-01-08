@@ -15,10 +15,10 @@ headers = {
     'cookie': cookie                         # 如果需要，您可以保留 cookie
 }
 
-for i in range(88,101):
+for i in range(35,101):
     page = f'page={i}'
     print(f"00000000000000000000000000000000000000page={page}")
-    response = urllib.request.urlopen(Request('https://github.com/orgs/Azure-Samples/repositories?q=sort:name-asc&%s' % (page)))
+    response = urllib.request.urlopen(Request('https://github.com/orgs/Azure/repositories?q=sort:name-asc&%s' % (page)))
     print(f'https://github.com/orgs/Azure-Samples/repositories?q=sort:name-asc&{page}')
     if response:
         # Get page content
@@ -43,7 +43,7 @@ for i in range(88,101):
                 if find_infra_core and find_infra_core.text != '0':
                     repo = f'https://github.com/Azure-Samples/{span.text}'
                     count += 1
-                    with open('output_all_1.txt', 'a', encoding='utf-8') as file:
+                    with open('output_all_Azure.txt', 'a', encoding='utf-8') as file:
                         file.write(repo + '\n')
                     print(repo)
                     print(f"11111111111111111111111111Processing repository: {repo_name}")

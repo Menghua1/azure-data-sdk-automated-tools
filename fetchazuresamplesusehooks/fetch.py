@@ -6,7 +6,7 @@ import time
 page = 'page'
 count = 0
 # Get your cookie, otherwise the page information cannot be obtained
-cookie = '_device_id=e740d20410241137525dd0d15d0a41e4; saved_user_sessions=81678720%3ABJRYOn9OKwMpT2AzoomgV7xgHXZKNujs1EEnGyJhbXyqwjG0; user_session=BJRYOn9OKwMpT2AzoomgV7xgHXZKNujs1EEnGyJhbXyqwjG0; __Host-user_session_same_site=BJRYOn9OKwMpT2AzoomgV7xgHXZKNujs1EEnGyJhbXyqwjG0; logged_in=yes; dotcom_user=zedy-wj; color_mode=%7B%22color_mode%22%3A%22dark%22%2C%22light_theme%22%3A%7B%22name%22%3A%22light%22%2C%22color_mode%22%3A%22light%22%7D%2C%22dark_theme%22%3A%7B%22name%22%3A%22dark_dimmed%22%2C%22color_mode%22%3A%22dark%22%7D%7D; preferred_color_mode=light; tz=Asia%2FShanghai; _octo=GH1.1.714910798.1721098088; _gh_sess=D9Pu2I%2B5Dk%2BKrgDYUTMMEZawXl1APnTJVqaX%2FKEZw6xW01NAK%2B1paSXjlmA9UtrHkb9x%2BLeFGDFW5x3v5Nxl84bFArM0QXYjQKn4eBvIDN2QyTypxxeEAyClenYEL48nk%2BHGlx2j%2BpV3Z1z45%2BzQqjZhicZfO0cwneH3LodLNFIgbberPera%2Fw8RtlYPeApnt%2FuTepn5BE2ppdtr0zkuNhLD8Lj2tu%2F5qUs00yAk3NfhiJPMHmoOZc80fxCaOoh33nN6aT%2BI2MPA4jHYyAWInPvrS0K3BqFy20M980%2FpRJ6pNt7nqXUpuCXlA00KhgjjN65RRRcdNdYWzmSV0kHiC%2BwSwHvIb5gQv70aXq44Jjx4zA3UqggPnHYbxep6BWocfzrFptHc0J%2B6yhE%2BLTj1H56lFifK9lncE3PpGnfxJA7nTI7jHYRRkdtfgxtCuICmoQKhu5YpDBAdWroTD%2BqeNU%2FVYN7OauD6eJsX6aN4MCQpdln%2F--VW%2FXkvvNaQzagZsw--EamEusPO1JnJaiKspKrOAA%3D%3D'
+cookie = ''
 for i in range(1,89):
     page = 'page=%d'%(i)
     response = urllib.request.urlopen('https://github.com/orgs/Azure-Samples/repositories?q=sort:name-asc&%s'%(page))

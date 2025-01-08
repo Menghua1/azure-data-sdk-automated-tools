@@ -14,9 +14,9 @@ base_search_url = 'https://github.com/search'
 
 # 查询参数
 query_params = {
-    'q': 'org:Azure-Samples "setup-azd@v1.0.0"',
+    'q': 'setup-azd@v1.0.0 (org:Microsoft OR org:MicrosoftDocs OR org:dotnet OR org:Azure OR org:Azure-Samples)',
     'type': 'code',
-    'p': 1  
+    'p': 1  # 页码，从第1页开始
 }
 
 # 手动设置要搜索的页数
@@ -52,19 +52,19 @@ for page_num in range(1, max_pages + 1):
         repo_name = repo_element.find('a')['href'].split(' ')[0]  # 获取仓库的 URL 部分
         if repo_name not in found_repos:
             found_repos.add(repo_name)
-            repo_url = f"https://github.com/{repo_name}"
+            repo_url = f"https://github.com{repo_name}"
             print(f"找到仓库：{repo_url}")
             # 将结果写入文件
-            with open('output.txt1', 'a', encoding='utf-8') as file:
+            with open('output_more.txt', 'a', encoding='utf-8') as file:
                 file.write(repo_url + '\n')
         #不去重的
-        # for repo_element in repo_elements:
-        # repo_name = repo_element.find('a')['href'].split(' ')[0]  # 获取仓库的 URL 部分
-        # repo_url = f"https://github.com/{repo_name}"
-        # print(f"找到仓库：{repo_url}")
-        # # 将结果写入文件
-        # with open('output.txt', 'a', encoding='utf-8') as file:
-        #     file.write(repo_url + '\n')
+    # for repo_element in repo_elements:
+    #     repo_name = repo_element.find('a')['href'].split(' ')[0]  # 获取仓库的 URL 部分
+    #     repo_url = f"https://github.com/{repo_name}"
+    #     print(f"找到仓库：{repo_url}")
+    #     # 将结果写入文件
+    #     with open('output_more.txt', 'a', encoding='utf-8') as file:
+    #         file.write(repo_url + '\n')
 
     # 为避免请求过于频繁，增加延时
     time.sleep(2)
